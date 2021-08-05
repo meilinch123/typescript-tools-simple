@@ -10,6 +10,14 @@ import tools from 'demo-simple-tools'
 tools.watermark({})
 ```
 
+or
+
+```js
+import { watermark } from 'demo-simple-tools'
+// 页面DOM加载完毕之后调用
+watermark({})
+```
+
 - 配置项
 
 ```js
@@ -33,10 +41,9 @@ const DEFAULT_SETTINGS = {
 ## 自定义指令
 
 ```js
-  import tools from 'demo-simple-tools'
+  import { directives } from 'demo-simple-tools'
   import Vue from 'vue'
 
-  const directives: any = tools.directives
   const directivesKey = Object.keys(directives)
   directivesKey.map((item) => {
     Vue.directive(item, directives[item])

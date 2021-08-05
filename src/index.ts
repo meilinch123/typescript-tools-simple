@@ -1,7 +1,14 @@
 import watermark from './tools/watermark'
 import directives from './directives'
 
-export default {
+const tools = {
   watermark,
   directives
 }
+
+export {
+  watermark,
+  directives
+}
+
+export default tools
